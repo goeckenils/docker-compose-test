@@ -15,9 +15,8 @@ services:
       - dokploy-network
     labels:
       - traefik.enable=true
-      - traefik.http.routers.next-app.rule=Host(`next-app.dokploy.com`)
-      - traefik.http.routers.next-app.entrypoints=websecure
-      - traefik.http.routers.next-app.tls.certResolver=letsencrypt
+      - traefik.http.routers.next-app.rule=Host(`app.needmore.online`)
+      - traefik.http.routers.next-app.entrypoints=web
       - traefik.http.services.next-app.loadbalancer.server.port=3000
   # Add more containers below (nginx, postgres, etc.)
 # Define a network, which allows containers to communicate
